@@ -219,7 +219,7 @@ class _RuleTemplatesAddOrEditScreenState
     return Scrollbar(
       child: ReorderableListView(
         children: widgets,
-        onReorder: (int oldIndex, int newIndex) {
+        onReorderItem: (int oldIndex, int newIndex) {
           _data.reorder(oldIndex, newIndex);
 
           setState(() {});

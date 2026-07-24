@@ -109,7 +109,7 @@ class _ProxyGroupsScreenState extends LasyRenderingState<ProxyGroupsScreen> {
     return Scrollbar(
       child: ReorderableListView(
         children: widgets,
-        onReorder: (int oldIndex, int newIndex) {},
+        onReorderItem: (int oldIndex, int newIndex) {},
       ),
     );
   }

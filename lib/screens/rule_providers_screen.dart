@@ -108,7 +108,7 @@ class _RuleProvidersScreenState
     return Scrollbar(
       child: ReorderableListView(
         children: widgets,
-        onReorder: (int oldIndex, int newIndex) {
+        onReorderItem: (int oldIndex, int newIndex) {
           DiversionTemplateManager.reorderRuleProvider(oldIndex, newIndex);
           DiversionTemplateManager.save();
           setState(() {});

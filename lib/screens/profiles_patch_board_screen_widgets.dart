@@ -230,7 +230,7 @@ class _ProfilesPatchBoardScreenWidget
         child: Scrollbar(
           child: ReorderableListView(
             children: widgets,
-            onReorder: (int oldIndex, int newIndex) {
+            onReorderItem: (int oldIndex, int newIndex) {
               ProfilePatchManager.reorder(oldIndex, newIndex);
 
               setState(() {});

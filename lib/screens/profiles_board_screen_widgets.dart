@@ -296,7 +296,7 @@ class _ProfilesBoardScreenWidget extends State<ProfilesBoardScreenWidget> {
         child: Scrollbar(
           child: ReorderableListView(
             children: widgets,
-            onReorder: (int oldIndex, int newIndex) {
+            onReorderItem: (int oldIndex, int newIndex) {
               ProfileManager.reorder(oldIndex, newIndex);
 
               setState(() {});

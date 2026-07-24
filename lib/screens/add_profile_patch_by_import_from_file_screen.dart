@@ -223,7 +223,7 @@ class _AddProfilePatchByImportFromFileScreenState
     extensions = _type == ProfilePatchFileType.yaml ? ['yaml', 'yml'] : ['js'];
 
     try {
-      FilePickerResult? fresult = await FilePicker.platform.pickFiles(
+      FilePickerResult? fresult = await FilePicker.pickFiles(
         type: Platform.isAndroid ? FileType.any : FileType.custom,
         allowedExtensions: Platform.isAndroid ? null : extensions,
       );

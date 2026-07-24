@@ -110,7 +110,7 @@ class _ProxyGroupsScreenState
     return Scrollbar(
       child: ReorderableListView(
         children: widgets,
-        onReorder: (int oldIndex, int newIndex) {
+        onReorderItem: (int oldIndex, int newIndex) {
           DiversionTemplateManager.reorderProxyGroupTemplates(
             oldIndex,
             newIndex,
