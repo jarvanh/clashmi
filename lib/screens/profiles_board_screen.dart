@@ -11,7 +11,7 @@ import 'package:clashmi/screens/add_profile_by_import_from_file_screen.dart';
 import 'package:clashmi/screens/add_profile_by_scan_qrcode_screen.dart';
 import 'package:clashmi/screens/add_profile_by_url_screen.dart';
 import 'package:clashmi/screens/dialog_utils.dart';
-import 'package:clashmi/screens/login_screen.dart';
+import 'package:clashmi/screens/login_step_provider_screen.dart';
 import 'package:clashmi/screens/profiles_board_screen_widgets.dart';
 import 'package:clashmi/screens/theme_config.dart';
 import 'package:clashmi/screens/webview_helper.dart';
@@ -179,10 +179,7 @@ class _ProfilesBoardScreenState extends LasyRenderingState<ProfilesBoardScreen>
       var provider = BoardProviderManager.getProviderById(
         currentProfile.boardProviderId,
       );
-      if (provider != null &&
-          provider.benefits.contains(
-            BoardProviderBenefit.hideRecommendMenu.name,
-          )) {
+      if (provider != null && provider.hideRecommendMenu) {
         hideGetProfile = true;
       }
     }
@@ -316,8 +313,8 @@ class _ProfilesBoardScreenState extends LasyRenderingState<ProfilesBoardScreen>
           await Navigator.push(
             context,
             MaterialPageRoute(
-              settings: LoginScreen.routSettings(),
-              builder: (context) => LoginScreen(),
+              settings: LoginStepProviderScreen.routSettings(),
+              builder: (context) => const LoginStepProviderScreen(),
             ),
           );
         },

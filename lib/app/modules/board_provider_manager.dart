@@ -23,35 +23,6 @@ enum BoardProviderType {
   }
 }
 
-enum BoardProviderBenefit {
-  panelLogin(name: "panel_login"),
-  highlightPin(name: "highlight_pin"),
-  logoBranding(name: "logo_branding"),
-  renewalReminder(name: "renewal_reminder"),
-  hideRecommendMenu(name: "hide_recommend_menu"),
-  partialPanelRenewal(name: "partial_panel_renewal"),
-  unbanSubscription(name: "unban_subscription"),
-  customSpell(name: "custom_spell"),
-  notificationPush(name: "notification_push");
-
-  const BoardProviderBenefit({required this.name});
-  final String name;
-
-  static bool support(String name) {
-    return {
-      panelLogin.name,
-      highlightPin.name,
-      logoBranding.name,
-      renewalReminder.name,
-      hideRecommendMenu.name,
-      partialPanelRenewal.name,
-      unbanSubscription.name,
-      customSpell.name,
-      notificationPush.name,
-    }.contains(name);
-  }
-}
-
 class BoardProviderConfigError {
   int code;
   String? msg;
@@ -89,16 +60,16 @@ class BoardProviderConfig {
   String planUrl;
   String homeUrl;
   String appIconUrl;
-  List<String> benefits = [];
+
   //benefits begin
-  bool panelLogin = false;
+  bool panelLogin = true;
   bool highlightPin = false;
   bool logoBranding = false;
   bool renewalReminder = false;
   bool hideRecommendMenu = false;
   bool hideNodeDetails = false;
   bool partialPanelRenewal = false;
-  bool unbanSubscription = false;
+  bool unbanSubscription = true;
   bool customSpell = false;
   bool notificationPush = false;
   //benefits end
@@ -128,15 +99,14 @@ class BoardProviderConfig {
     this.planUrl = '',
     this.homeUrl = '',
     this.appIconUrl = '',
-    this.benefits = const [],
-    this.panelLogin = false,
+    this.panelLogin = true,
     this.highlightPin = false,
     this.logoBranding = false,
     this.renewalReminder = false,
     this.hideRecommendMenu = false,
     this.hideNodeDetails = false,
     this.partialPanelRenewal = false,
-    this.unbanSubscription = false,
+    this.unbanSubscription = true,
     this.customSpell = false,
     this.notificationPush = false,
     this.botCookie = '', //'cf_clearance',
@@ -167,7 +137,6 @@ class BoardProviderConfig {
     'plan_url': planUrl,
     'home_url': homeUrl,
     'app_icon_url': appIconUrl,
-    'benefits': benefits,
     'panel_login': panelLogin,
     'highlight_pin': highlightPin,
     'logo_branding': logoBranding,
@@ -215,51 +184,17 @@ class BoardProviderConfig {
     planUrl = map["plan_url"] ?? "";
     homeUrl = map["home_url"] ?? "";
     appIconUrl = map["app_icon_url"] ?? "";
-    benefits = List<String>.from(map["benefits"] ?? []);
-    panelLogin =
-        map["panel_login"] ??
-        benefits.contains(BoardProviderBenefit.panelLogin.name);
-    highlightPin =
-        map["highlight_pin"] ??
-        benefits.contains(BoardProviderBenefit.highlightPin.name);
-    logoBranding =
-        map["logo_branding"] ??
-        benefits.contains(BoardProviderBenefit.logoBranding.name);
-    renewalReminder =
-        map["renewal_reminder"] ??
-        benefits.contains(BoardProviderBenefit.renewalReminder.name);
-    hideRecommendMenu =
-        map["hide_recommend_menu"] ??
-        benefits.contains(BoardProviderBenefit.hideRecommendMenu.name);
+    panelLogin = map["panel_login"] ?? true;
+    highlightPin = map["highlight_pin"] ?? false;
+    logoBranding = map["logo_branding"] ?? false;
+    renewalReminder = map["renewal_reminder"] ?? false;
+    hideRecommendMenu = map["hide_recommend_menu"] ?? false;
     hideNodeDetails = map["hide_node_details"] ?? false;
-    partialPanelRenewal =
-        map["partial_panel_renewal"] ??
-        benefits.contains(BoardProviderBenefit.partialPanelRenewal.name);
-    unbanSubscription =
-        map["unban_subscription"] ??
-        benefits.contains(BoardProviderBenefit.unbanSubscription.name);
-    customSpell =
-        map["custom_spell"] ??
-        benefits.contains(BoardProviderBenefit.customSpell.name);
-    notificationPush =
-        map["notification_push"] ??
-        benefits.contains(BoardProviderBenefit.notificationPush.name);
-    hideRecommendMenu =
-        map["hide_recommend_menu"] ??
-        benefits.contains(BoardProviderBenefit.hideRecommendMenu.name);
-    hideNodeDetails = map["hide_node_details"] ?? false;
-    partialPanelRenewal =
-        map["partial_panel_renewal"] ??
-        benefits.contains(BoardProviderBenefit.partialPanelRenewal.name);
-    unbanSubscription =
-        map["unban_subscription"] ??
-        benefits.contains(BoardProviderBenefit.unbanSubscription.name);
-    customSpell =
-        map["custom_spell"] ??
-        benefits.contains(BoardProviderBenefit.customSpell.name);
-    notificationPush =
-        map["notification_push"] ??
-        benefits.contains(BoardProviderBenefit.notificationPush.name);
+    partialPanelRenewal = map["partial_panel_renewal"] ?? false;
+    unbanSubscription = map["unban_subscription"] ?? true;
+    customSpell = map["custom_spell"] ?? false;
+    notificationPush = map["notification_push"] ?? false;
+
     botCookie = map["bot_cookie"] ?? ""; //"cf_clearance";
     // lastUpdated = map["last_updated"] != null
     //     ? DateTime.fromMicrosecondsSinceEpoch(map["last_updated"])
@@ -411,10 +346,6 @@ class BoardProviderManager {
       planUrl: "",
       homeUrl: "",
       appIconUrl: "",
-      benefits: [
-        BoardProviderBenefit.panelLogin.name,
-        BoardProviderBenefit.unbanSubscription.name,
-      ],
     );
 
     _providers.add(provider);
