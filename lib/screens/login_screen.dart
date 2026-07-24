@@ -575,7 +575,7 @@ class _LoginScreenState extends State<LoginScreen> {
       return;
     }
 
-    if (!result.data!.benefits.contains(BoardProviderBenefit.panelLogin.name)) {
+    if (!result.data!.panelLogin) {
       _provider = null;
       _logining = false;
       setState(() {});

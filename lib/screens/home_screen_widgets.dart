@@ -399,10 +399,7 @@ class _HomeScreenWidgetPart1 extends State<HomeScreenWidgetPart1> {
                       GroupHelper.showVpnProvider(context, provider, session);
                     },
                     child:
-                        provider.appIconUrl.isNotEmpty &&
-                            provider.benefits.contains(
-                              BoardProviderBenefit.logoBranding.name,
-                            )
+                        provider.appIconUrl.isNotEmpty && provider.logoBranding
                         ? FastCachedImage(
                             url: provider.appIconUrl,
                             width: 32,

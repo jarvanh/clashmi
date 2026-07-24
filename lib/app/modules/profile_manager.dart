@@ -631,10 +631,7 @@ class ProfileManager {
           boardProviderId.isNotEmpty) {
         final provider = BoardProviderManager.getProviderById(boardProviderId);
         if (boardProviderId == BoardProviderManager.unknownProviderId ||
-            (provider != null &&
-                provider.benefits.contains(
-                  BoardProviderBenefit.unbanSubscription.name,
-                ))) {
+            (provider != null && provider.unbanSubscription)) {
           final result2 = await downloadByProviderProxy(
             boardProviderId,
             url,
@@ -747,10 +744,7 @@ class ProfileManager {
       bool insertToFirst = false;
       if (boardProviderId.isNotEmpty) {
         final provider = BoardProviderManager.getProviderById(boardProviderId);
-        if (provider != null &&
-            provider.benefits.contains(
-              BoardProviderBenefit.highlightPin.name,
-            )) {
+        if (provider != null && provider.highlightPin) {
           insertToFirst = true;
         }
       }
@@ -834,10 +828,7 @@ class ProfileManager {
         final provider = BoardProviderManager.getProviderById(
           profile.boardProviderId,
         );
-        if (provider != null &&
-            provider.benefits.contains(
-              BoardProviderBenefit.unbanSubscription.name,
-            )) {
+        if (provider != null && provider.unbanSubscription) {
           final result2 = await downloadByProviderProxy(
             profile.boardProviderId,
             profile.url,

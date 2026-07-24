@@ -98,10 +98,7 @@ class ProfilesBoardItem extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       if (provider != null) ...[
-                        provider.appIconUrl.isNotEmpty &&
-                                provider.benefits.contains(
-                                  BoardProviderBenefit.logoBranding.name,
-                                )
+                        provider.appIconUrl.isNotEmpty && provider.logoBranding
                             ? FastCachedImage(
                                 url: provider.appIconUrl,
                                 width: 16,

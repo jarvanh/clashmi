@@ -83,6 +83,7 @@ class BoardProviderConfig {
   String clientServiceUrl;
   String subscriptionChannelUrl;
   String loginUrl;
+  String bindJs;
   String? registerUrl;
   String forgotPasswordUrl;
   String planUrl;
@@ -121,6 +122,7 @@ class BoardProviderConfig {
     this.clientServiceUrl = '',
     this.subscriptionChannelUrl = '',
     this.loginUrl = '',
+    this.bindJs = '',
     this.registerUrl,
     this.forgotPasswordUrl = '',
     this.planUrl = '',
@@ -159,6 +161,7 @@ class BoardProviderConfig {
     'client_service_url': clientServiceUrl,
     'subscription_channel_url': subscriptionChannelUrl,
     'login_url': loginUrl,
+    'bind_js': bindJs,
     'register_url': registerUrl,
     'forgot_password_url': forgotPasswordUrl,
     'plan_url': planUrl,
@@ -206,28 +209,57 @@ class BoardProviderConfig {
     clientServiceUrl = map["client_service_url"] ?? "";
     subscriptionChannelUrl = map["subscription_channel_url"] ?? "";
     loginUrl = map["login_url"] ?? "";
+    bindJs = map["bind_js"] ?? "";
     registerUrl = map["register_url"];
     forgotPasswordUrl = map["forgot_password_url"] ?? "";
     planUrl = map["plan_url"] ?? "";
     homeUrl = map["home_url"] ?? "";
     appIconUrl = map["app_icon_url"] ?? "";
     benefits = List<String>.from(map["benefits"] ?? []);
-    panelLogin = map["panel_login"] ?? false;
-    highlightPin = map["highlight_pin"] ?? false;
-    logoBranding = map["logo_branding"] ?? false;
-    renewalReminder = map["renewal_reminder"] ?? false;
-    hideRecommendMenu = map["hide_recommend_menu"] ?? false;
+    panelLogin =
+        map["panel_login"] ??
+        benefits.contains(BoardProviderBenefit.panelLogin.name);
+    highlightPin =
+        map["highlight_pin"] ??
+        benefits.contains(BoardProviderBenefit.highlightPin.name);
+    logoBranding =
+        map["logo_branding"] ??
+        benefits.contains(BoardProviderBenefit.logoBranding.name);
+    renewalReminder =
+        map["renewal_reminder"] ??
+        benefits.contains(BoardProviderBenefit.renewalReminder.name);
+    hideRecommendMenu =
+        map["hide_recommend_menu"] ??
+        benefits.contains(BoardProviderBenefit.hideRecommendMenu.name);
     hideNodeDetails = map["hide_node_details"] ?? false;
-    partialPanelRenewal = map["partial_panel_renewal"] ?? false;
-    unbanSubscription = map["unban_subscription"] ?? false;
-    customSpell = map["custom_spell"] ?? false;
-    notificationPush = map["notification_push"] ?? false;
-    hideRecommendMenu = map["hide_recommend_menu"] ?? false;
+    partialPanelRenewal =
+        map["partial_panel_renewal"] ??
+        benefits.contains(BoardProviderBenefit.partialPanelRenewal.name);
+    unbanSubscription =
+        map["unban_subscription"] ??
+        benefits.contains(BoardProviderBenefit.unbanSubscription.name);
+    customSpell =
+        map["custom_spell"] ??
+        benefits.contains(BoardProviderBenefit.customSpell.name);
+    notificationPush =
+        map["notification_push"] ??
+        benefits.contains(BoardProviderBenefit.notificationPush.name);
+    hideRecommendMenu =
+        map["hide_recommend_menu"] ??
+        benefits.contains(BoardProviderBenefit.hideRecommendMenu.name);
     hideNodeDetails = map["hide_node_details"] ?? false;
-    partialPanelRenewal = map["partial_panel_renewal"] ?? false;
-    unbanSubscription = map["unban_subscription"] ?? false;
-    customSpell = map["custom_spell"] ?? false;
-    notificationPush = map["notification_push"] ?? false;
+    partialPanelRenewal =
+        map["partial_panel_renewal"] ??
+        benefits.contains(BoardProviderBenefit.partialPanelRenewal.name);
+    unbanSubscription =
+        map["unban_subscription"] ??
+        benefits.contains(BoardProviderBenefit.unbanSubscription.name);
+    customSpell =
+        map["custom_spell"] ??
+        benefits.contains(BoardProviderBenefit.customSpell.name);
+    notificationPush =
+        map["notification_push"] ??
+        benefits.contains(BoardProviderBenefit.notificationPush.name);
     botCookie = map["bot_cookie"] ?? ""; //"cf_clearance";
     // lastUpdated = map["last_updated"] != null
     //     ? DateTime.fromMicrosecondsSinceEpoch(map["last_updated"])
