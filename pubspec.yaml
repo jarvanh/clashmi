@@ -20,6 +20,7 @@ dependencies:
   package_info_plus: 9.0.0
   ffi: 2.2.0
   url_launcher: 6.3.2
+  #flutter_inappwebview: 6.2.0-beta.3
   flutter_inappwebview:
     #path: ../../KaringX/flutter_inappwebview/flutter_inappwebview
     git: 
@@ -49,7 +50,7 @@ dependencies:
   after_layout: 1.2.0
   flutter_install_referrer: 2.1.1
   flutter_single_instance: 1.7.0
-  flutter_plugin_android_lifecycle: 2.0.33 #file_picker image_picker
+  flutter_plugin_android_lifecycle: 2.0.35 #file_picker image_picker
   file_picker: 11.0.2
   image_picker: 1.2.3
   tray_manager: 0.5.3
