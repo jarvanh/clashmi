@@ -234,7 +234,7 @@ class _LoginStepProviderScreenState extends State<LoginStepProviderScreen> {
     );
   }
 
-  void _go({bool handle403 = true}) async {
+  void _go() async {
     if (!_formKey.currentState!.validate()) {
       return;
     }

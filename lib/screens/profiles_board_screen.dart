@@ -183,6 +183,22 @@ class _ProfilesBoardScreenState extends LasyRenderingState<ProfilesBoardScreen>
         hideGetProfile = true;
       }
     }
+    final cn =
+        WidgetsBinding.instance.platformDispatcher.locale.countryCode == "CN";
+    final login = ListTile(
+      leading: const Icon(Icons.login_outlined),
+      title: Text(tcontext.loginScreen.login),
+      onTap: () async {
+        Navigator.of(context).pop();
+        await Navigator.push(
+          context,
+          MaterialPageRoute(
+            settings: LoginStepProviderScreen.routSettings(),
+            builder: (context) => const LoginStepProviderScreen(),
+          ),
+        );
+      },
+    );
     var widgets = [
       if (!hideGetProfile) ...[
         ListTile(
@@ -213,6 +229,7 @@ class _ProfilesBoardScreenState extends LasyRenderingState<ProfilesBoardScreen>
           },
         ),
       ],
+      if (cn) ...[login],
       ListTile(
         leading: const Icon(Icons.add_link_outlined),
         title: Text(tcontext.meta.profileAddUrlOrContent),
@@ -305,20 +322,7 @@ class _ProfilesBoardScreenState extends LasyRenderingState<ProfilesBoardScreen>
           );
         },
       ),
-      ListTile(
-        leading: const Icon(Icons.login_outlined),
-        title: Text(tcontext.loginScreen.login),
-        onTap: () async {
-          Navigator.of(context).pop();
-          await Navigator.push(
-            context,
-            MaterialPageRoute(
-              settings: LoginStepProviderScreen.routSettings(),
-              builder: (context) => const LoginStepProviderScreen(),
-            ),
-          );
-        },
-      ),
+      if (!cn) ...[login],
     ];
 
     showSheet(
