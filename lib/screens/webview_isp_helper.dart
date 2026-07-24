@@ -3,7 +3,6 @@ import 'dart:convert';
 import 'package:clashmi/app/modules/board_provider_manager.dart';
 import 'package:clashmi/app/modules/profile_manager.dart';
 import 'package:clashmi/app/modules/profile_patch_manager.dart';
-import 'package:clashmi/screens/dialog_utils.dart';
 import 'package:flutter/material.dart';
 
 class WebviewISPHelper {
