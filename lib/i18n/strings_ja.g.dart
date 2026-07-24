@@ -178,6 +178,7 @@ class _Translations$loginScreen$ja implements Translations$loginScreen$en {
 	@override String get unsupportedProviderType => 'サポートされていない${_root.loginScreen.provider}タイプ';
 	@override String get unActivedProvider => 'ログイン機能は有効化されていません';
 	@override String providerLoginSupportRequired({required Object p}) => 'プロバイダーのコード/別名は${_root.loginScreen.provider}にお問い合わせください。\n${_root.loginScreen.provider}連携は次をご参照ください: ${p}';
+	@override String get providerDisclaimer => '免責事項:${_root.loginScreen.provider}はサードパーティサービスであり、本アプリとは無関係です';
 }
 
 // Path: main
@@ -596,6 +597,7 @@ extension on TranslationsJa {
 			'loginScreen.unsupportedProviderType' => 'サポートされていない${_root.loginScreen.provider}タイプ',
 			'loginScreen.unActivedProvider' => 'ログイン機能は有効化されていません',
 			'loginScreen.providerLoginSupportRequired' => ({required Object p}) => 'プロバイダーのコード/別名は${_root.loginScreen.provider}にお問い合わせください。\n${_root.loginScreen.provider}連携は次をご参照ください: ${p}',
+			'loginScreen.providerDisclaimer' => '免責事項:${_root.loginScreen.provider}はサードパーティサービスであり、本アプリとは無関係です',
 			'main.tray.menuOpen' => '開く',
 			'main.tray.menuExit' => '終了',
 			'meta.enable' => '有効',

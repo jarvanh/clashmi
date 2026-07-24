@@ -60,7 +60,8 @@
         "unsupportedProvider": "Unsupported @:{loginScreen.provider}",
         "unsupportedProviderType": "Unsupported @:{loginScreen.provider} type",
         "unActivedProvider": "Login feature is not activated",
-        "providerLoginSupportRequired": "Please request the provider code/alias from your @:{loginScreen.provider}.\nFor @:{loginScreen.provider} integration, please refer to: $p"
+        "providerLoginSupportRequired": "Please request the provider code/alias from your @:{loginScreen.provider}.\nFor @:{loginScreen.provider} integration, please refer to: $p",
+        "providerDisclaimer": "Disclaimer: @:{loginScreen.provider} is a third-party service and is not affiliated with this app"
     },
     "main": {
         "tray": {

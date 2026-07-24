@@ -286,6 +286,9 @@ class Translations$loginScreen$en {
 
 	/// en: 'Please request the provider code/alias from your Provider. For Provider integration, please refer to: $p'
 	String providerLoginSupportRequired({required Object p}) => 'Please request the provider code/alias from your ${_root.loginScreen.provider}.\nFor ${_root.loginScreen.provider} integration, please refer to: ${p}';
+
+	/// en: 'Disclaimer: Provider is a third-party service and is not affiliated with this app'
+	String get providerDisclaimer => 'Disclaimer: ${_root.loginScreen.provider} is a third-party service and is not affiliated with this app';
 }
 
 // Path: main
@@ -1258,6 +1261,7 @@ extension on Translations {
 			'loginScreen.unsupportedProviderType' => 'Unsupported ${_root.loginScreen.provider} type',
 			'loginScreen.unActivedProvider' => 'Login feature is not activated',
 			'loginScreen.providerLoginSupportRequired' => ({required Object p}) => 'Please request the provider code/alias from your ${_root.loginScreen.provider}.\nFor ${_root.loginScreen.provider} integration, please refer to: ${p}',
+			'loginScreen.providerDisclaimer' => 'Disclaimer: ${_root.loginScreen.provider} is a third-party service and is not affiliated with this app',
 			'main.tray.menuOpen' => 'Open',
 			'main.tray.menuExit' => 'Exit',
 			'meta.enable' => 'Enable',

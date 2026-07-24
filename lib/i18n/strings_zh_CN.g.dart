@@ -178,6 +178,7 @@ class Translations$loginScreen$zh_CN implements Translations$loginScreen$en {
 	@override String get unsupportedProviderType => '不支持的${_root.loginScreen.provider}类型';
 	@override String get unActivedProvider => '登录功能未激活';
 	@override String providerLoginSupportRequired({required Object p}) => '编码/别名请找${_root.loginScreen.provider}索要\n${_root.loginScreen.provider}接入请参考:${p}';
+	@override String get providerDisclaimer => '免责声明:${_root.loginScreen.provider}为三方服务,与本App无关';
 }
 
 // Path: main
@@ -596,6 +597,7 @@ extension on TranslationsZhCn {
 			'loginScreen.unsupportedProviderType' => '不支持的${_root.loginScreen.provider}类型',
 			'loginScreen.unActivedProvider' => '登录功能未激活',
 			'loginScreen.providerLoginSupportRequired' => ({required Object p}) => '编码/别名请找${_root.loginScreen.provider}索要\n${_root.loginScreen.provider}接入请参考:${p}',
+			'loginScreen.providerDisclaimer' => '免责声明:${_root.loginScreen.provider}为三方服务,与本App无关',
 			'main.tray.menuOpen' => '打开',
 			'main.tray.menuExit' => '退出',
 			'meta.enable' => '启用',

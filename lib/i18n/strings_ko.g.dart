@@ -178,6 +178,7 @@ class _Translations$loginScreen$ko implements Translations$loginScreen$en {
 	@override String get unsupportedProviderType => '지원되지 않는 ${_root.loginScreen.provider} 유형';
 	@override String get unActivedProvider => '로그인 기능이 활성화되어 있지 않습니다';
 	@override String providerLoginSupportRequired({required Object p}) => '공급자 코드/별칭은 ${_root.loginScreen.provider}에 문의해 주세요.\n${_root.loginScreen.provider} 연동은 다음을 참고하세요: ${p}';
+	@override String get providerDisclaimer => '면책 조항: ${_root.loginScreen.provider}는 제3자 서비스이며, 본 앱과는 무관합니다';
 }
 
 // Path: main
@@ -596,6 +597,7 @@ extension on TranslationsKo {
 			'loginScreen.unsupportedProviderType' => '지원되지 않는 ${_root.loginScreen.provider} 유형',
 			'loginScreen.unActivedProvider' => '로그인 기능이 활성화되어 있지 않습니다',
 			'loginScreen.providerLoginSupportRequired' => ({required Object p}) => '공급자 코드/별칭은 ${_root.loginScreen.provider}에 문의해 주세요.\n${_root.loginScreen.provider} 연동은 다음을 참고하세요: ${p}',
+			'loginScreen.providerDisclaimer' => '면책 조항: ${_root.loginScreen.provider}는 제3자 서비스이며, 본 앱과는 무관합니다',
 			'main.tray.menuOpen' => '열기',
 			'main.tray.menuExit' => '종료',
 			'meta.enable' => '활성화',

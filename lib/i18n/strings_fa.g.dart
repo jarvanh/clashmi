@@ -178,6 +178,7 @@ class _Translations$loginScreen$fa implements Translations$loginScreen$en {
 	@override String get unsupportedProviderType => 'نوع ${_root.loginScreen.provider} پشتیبانی نمی شود';
 	@override String get unActivedProvider => 'قابلیت ورود فعال نشده است';
 	@override String providerLoginSupportRequired({required Object p}) => 'لطفاً کد/نام مستعار ارائه‌دهنده را از ${_root.loginScreen.provider} دریافت کنید.\nبرای راهنمای اتصال ${_root.loginScreen.provider} به این لینک مراجعه کنید: ${p}';
+	@override String get providerDisclaimer => 'سلب مسئولیت: ${_root.loginScreen.provider} یک سرویس شخص ثالث است و ارتباطی با این برنامه ندارد';
 }
 
 // Path: main
@@ -596,6 +597,7 @@ extension on TranslationsFa {
 			'loginScreen.unsupportedProviderType' => 'نوع ${_root.loginScreen.provider} پشتیبانی نمی شود',
 			'loginScreen.unActivedProvider' => 'قابلیت ورود فعال نشده است',
 			'loginScreen.providerLoginSupportRequired' => ({required Object p}) => 'لطفاً کد/نام مستعار ارائه‌دهنده را از ${_root.loginScreen.provider} دریافت کنید.\nبرای راهنمای اتصال ${_root.loginScreen.provider} به این لینک مراجعه کنید: ${p}',
+			'loginScreen.providerDisclaimer' => 'سلب مسئولیت: ${_root.loginScreen.provider} یک سرویس شخص ثالث است و ارتباطی با این برنامه ندارد',
 			'main.tray.menuOpen' => 'بازکردن',
 			'main.tray.menuExit' => 'بستن',
 			'meta.enable' => 'فعال‌سازی',

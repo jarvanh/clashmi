@@ -178,6 +178,7 @@ class _Translations$loginScreen$es implements Translations$loginScreen$en {
 	@override String get unsupportedProviderType => 'Tipo de ${_root.loginScreen.provider} no compatible';
 	@override String get unActivedProvider => 'La función de inicio de sesión no está activada';
 	@override String providerLoginSupportRequired({required Object p}) => 'Solicita el código/alias del proveedor a tu ${_root.loginScreen.provider}.\nPara la integración con ${_root.loginScreen.provider}, consulta: ${p}';
+	@override String get providerDisclaimer => 'Aviso legal: ${_root.loginScreen.provider} es un servicio de terceros y no está relacionado con esta aplicación';
 }
 
 // Path: main
@@ -596,6 +597,7 @@ extension on TranslationsEs {
 			'loginScreen.unsupportedProviderType' => 'Tipo de ${_root.loginScreen.provider} no compatible',
 			'loginScreen.unActivedProvider' => 'La función de inicio de sesión no está activada',
 			'loginScreen.providerLoginSupportRequired' => ({required Object p}) => 'Solicita el código/alias del proveedor a tu ${_root.loginScreen.provider}.\nPara la integración con ${_root.loginScreen.provider}, consulta: ${p}',
+			'loginScreen.providerDisclaimer' => 'Aviso legal: ${_root.loginScreen.provider} es un servicio de terceros y no está relacionado con esta aplicación',
 			'main.tray.menuOpen' => 'Abrir',
 			'main.tray.menuExit' => 'Salir',
 			'meta.enable' => 'Habilitar',

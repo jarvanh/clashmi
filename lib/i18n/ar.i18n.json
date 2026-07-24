@@ -60,7 +60,8 @@
         "unsupportedProvider": "@:{loginScreen.provider} غير مدعوم",
         "unsupportedProviderType": "نوع @:{loginScreen.provider} غير مدعوم",
         "unActivedProvider": "ميزة تسجيل الدخول غير مفعلة",
-        "providerLoginSupportRequired": "يرجى طلب رمز/اسم مستعار المزوّد من @:{loginScreen.provider}.\nللاطلاع على تكامل @:{loginScreen.provider}، راجع: $p"
+        "providerLoginSupportRequired": "يرجى طلب رمز/اسم مستعار المزوّد من @:{loginScreen.provider}.\nللاطلاع على تكامل @:{loginScreen.provider}، راجع: $p",
+        "providerDisclaimer": "إخلاء المسؤولية: @:{loginScreen.provider} هي خدمة تابعة لطرف ثالث ولا علاقة لها بهذا التطبيق"
     },
     "main": {
         "tray": {

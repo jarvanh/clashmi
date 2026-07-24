@@ -178,6 +178,7 @@ class _Translations$loginScreen$ru implements Translations$loginScreen$en {
 	@override String get unsupportedProviderType => 'Неподдерживаемый тип ${_root.loginScreen.provider}';
 	@override String get unActivedProvider => 'Функция входа не активирована';
 	@override String providerLoginSupportRequired({required Object p}) => 'Запросите код/алиас провайдера у вашего ${_root.loginScreen.provider}.\nИнструкцию по интеграции с ${_root.loginScreen.provider} смотрите: ${p}';
+	@override String get providerDisclaimer => 'Отказ от ответственности: ${_root.loginScreen.provider} — это сторонний сервис и не связан с этим приложением';
 }
 
 // Path: main
@@ -596,6 +597,7 @@ extension on TranslationsRu {
 			'loginScreen.unsupportedProviderType' => 'Неподдерживаемый тип ${_root.loginScreen.provider}',
 			'loginScreen.unActivedProvider' => 'Функция входа не активирована',
 			'loginScreen.providerLoginSupportRequired' => ({required Object p}) => 'Запросите код/алиас провайдера у вашего ${_root.loginScreen.provider}.\nИнструкцию по интеграции с ${_root.loginScreen.provider} смотрите: ${p}',
+			'loginScreen.providerDisclaimer' => 'Отказ от ответственности: ${_root.loginScreen.provider} — это сторонний сервис и не связан с этим приложением',
 			'main.tray.menuOpen' => 'Открыть',
 			'main.tray.menuExit' => 'Выйти',
 			'meta.enable' => 'Включить',

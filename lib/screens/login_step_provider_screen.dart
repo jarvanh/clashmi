@@ -149,6 +149,15 @@ class _LoginStepProviderScreenState extends State<LoginStepProviderScreen> {
                               );
                             },
                         ),
+                        TextSpan(
+                          text:
+                              "\n\n${tcontext.loginScreen.providerDisclaimer}",
+                          style: TextStyle(
+                            color: Colors.red,
+                            fontSize: 12,
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
                       ],
                     ),
                   ),

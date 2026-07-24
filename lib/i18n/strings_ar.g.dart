@@ -178,6 +178,7 @@ class _Translations$loginScreen$ar implements Translations$loginScreen$en {
 	@override String get unsupportedProviderType => 'نوع ${_root.loginScreen.provider} غير مدعوم';
 	@override String get unActivedProvider => 'ميزة تسجيل الدخول غير مفعلة';
 	@override String providerLoginSupportRequired({required Object p}) => 'يرجى طلب رمز/اسم مستعار المزوّد من ${_root.loginScreen.provider}.\nللاطلاع على تكامل ${_root.loginScreen.provider}، راجع: ${p}';
+	@override String get providerDisclaimer => 'إخلاء المسؤولية: ${_root.loginScreen.provider} هي خدمة تابعة لطرف ثالث ولا علاقة لها بهذا التطبيق';
 }
 
 // Path: main
@@ -596,6 +597,7 @@ extension on TranslationsAr {
 			'loginScreen.unsupportedProviderType' => 'نوع ${_root.loginScreen.provider} غير مدعوم',
 			'loginScreen.unActivedProvider' => 'ميزة تسجيل الدخول غير مفعلة',
 			'loginScreen.providerLoginSupportRequired' => ({required Object p}) => 'يرجى طلب رمز/اسم مستعار المزوّد من ${_root.loginScreen.provider}.\nللاطلاع على تكامل ${_root.loginScreen.provider}، راجع: ${p}',
+			'loginScreen.providerDisclaimer' => 'إخلاء المسؤولية: ${_root.loginScreen.provider} هي خدمة تابعة لطرف ثالث ولا علاقة لها بهذا التطبيق',
 			'main.tray.menuOpen' => 'يفتح',
 			'main.tray.menuExit' => 'مخرج',
 			'meta.enable' => 'يُمكَِن',
